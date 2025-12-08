@@ -2,7 +2,6 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,20 +12,17 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #e0e0e0;
+    background-color: #0f0f0f;
     font-size: clamp(14px, 1.5vw, 18px);
-    /* Responsive font size */
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
 }
 
 .parent {
-    background-color: #d6d4d4;
+    background-color: #1a1a1a;
     padding-top: 60px;
-    /* Adds spacing for the fixed nav */
 }
 
-/* Header */
 .header {
     background: url('images/japan-background-digital-art.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -38,7 +34,6 @@ body {
     color: #fff;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,18 +51,15 @@ body {
 
 .navbar img {
     width: 120px;
-    /* Adjusted logo size */
     margin-left: 10px;
 }
 
-/* Navigation List */
 .nav-list {
     display: none;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 70px;
-    /* Adjusted to move the dropdown further down */
     right: 0;
     width: 100%;
     text-align: center;
@@ -79,7 +71,6 @@ body {
 
 .nav-list.active {
     display: flex;
-    /* Show the menu when active */
     animation: slideDown 0.3s ease-in-out;
 }
 
@@ -104,17 +95,13 @@ body {
     color: #17d8f6;
 }
 
-/* Hamburger Menu for Mobile */
 .hamburger-menu {
     display: none;
-    /* Default display value */
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
     position: relative;
-    /* Ensure proper positioning */
     z-index: 1001;
-    /* Ensure it is above other elements */
 }
 
 .hamburger-menu span {
@@ -128,12 +115,10 @@ body {
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
-        /* Ensure hamburger menu is visible on small screens */
     }
 
     .nav-list {
         display: none;
-        /* Hidden by default */
         flex-direction: column;
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
@@ -146,7 +131,6 @@ body {
 
     .nav-list.active {
         display: flex;
-        /* Show the menu when active */
     }
 
     .info {
@@ -157,11 +141,9 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    /* Space between logo and nav */
     align-items: center;
     margin: 0 auto;
     padding: 0 30px;
-    /* More horizontal space */
     overflow-x: hidden;
     width: 100%;
     max-width: 1400px;
@@ -197,21 +179,17 @@ body {
     align-items: center;
     color: #fff;
     height: calc(100vh - 60px);
-    /* Adjusts height to account for the nav */
     margin: auto;
     width: 100vw;
-    /* Removed padding-top to avoid extra height */
 }
 
 .header-content h1 {
     font-size: clamp(2rem, 5vw, 4rem);
-    /* Responsive font size for headings */
     margin-bottom: 20px;
 }
 
 .header-content p {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-    /* Responsive font size for paragraphs */
     margin-bottom: 20px;
 }
 
@@ -230,7 +208,6 @@ body {
     background: #0cbaef;
 }
 
-/* About, Services, and Contact Sections */
 .about,
 .services,
 .contact {
@@ -238,11 +215,14 @@ body {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #0f0f0f;
+    color: #e0e0e0;
 }
 
 .about h2 {
     margin-bottom: 20px;
     font-size: 25px;
+    color: #17d8f6;
 }
 
 .info {
@@ -265,15 +245,38 @@ body {
     }
 
     .row {
-        background-color: rgb(255, 255, 255);
-        padding: 7px;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 7px 12px;
         border-radius: 20px;
-        border-bottom: 1px rgb(204, 190, 190) solid;
+        border: 1px solid rgba(23, 216, 246, 0.2);
         transition: 0.5s ease;
+        color: #e0e0e0;
+    }
+    .skills-cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+    .skills-cards span{
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 7px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(23, 216, 246, 0.338);
+        transition: 0.5s ease;
+        color: #e0e0e0;
+    }
+    .skills-cards span:hover{
+        transform: translateY(-5px);
+        border-color: rgba(23, 216, 246, 0.5);
+        box-shadow: 0 8px 25px rgba(23, 216, 246, 0.3);
     }
 
     .row:hover {
         transform: translateZ(70px);
+        border-color: rgba(23, 216, 246, 0.5);
+        box-shadow: 0 5px 20px rgba(23, 216, 246, 0.3);
     }
 }
 
@@ -292,13 +295,21 @@ body {
 }
 
 .card {
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     flex: 1 1 calc(33.333% - 20px);
-    /* Responsive grid */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(23, 216, 246, 0.2);
+    transition: all 0.3s ease;
+    color: #e0e0e0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(23, 216, 246, 0.5);
+    box-shadow: 0 8px 25px rgba(23, 216, 246, 0.3);
 }
 
 .card i {
@@ -309,13 +320,13 @@ body {
 
 .card h3 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    /* Responsive font size for card titles */
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .card p {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    /* Responsive font size for card text */
+    color: #b0b0b0;
 }
 
 @media (max-width: 768px) {
@@ -338,11 +349,20 @@ body {
 .contact input,
 .contact textarea {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    /* Responsive font size for form inputs */
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(23, 216, 246, 0.3);
     border-radius: 5px;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: #17d8f6;
+    box-shadow: 0 0 10px rgba(23, 216, 246, 0.3);
 }
 
 .contact button {
@@ -350,15 +370,15 @@ body {
 }
 
 .footer {
-    background: #232020;
-    color: #fff;
+    background: #0a0a0a;
+    color: #e0e0e0;
     text-align: center;
     padding: 20px 0;
+    border-top: 1px solid rgba(23, 216, 246, 0.2);
 }
 
 .footer p {
     font-size: clamp(0.8rem, 1.2vw, 1rem);
-    /* Responsive font size for footer text */
 }
 
 .images .card {
@@ -431,12 +451,29 @@ body {
     inset: 0 0 0 0;
     transform:
         rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.banner .slider .item:hover {
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(600px) scale(1.05);
+    box-shadow: 0 15px 60px rgba(23, 216, 246, 0.4);
 }
 
 .banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: filter 0.3s ease;
+    filter: brightness(0.85);
+}
+
+.banner .slider .item:hover img {
+    filter: brightness(1);
 }
 
 .banner .content {
@@ -473,7 +510,7 @@ body {
 
 .banner .content .author {
     font-family: Poppins;
-    text-align: right;
+    text-align: center;
     max-width: 200px;
 }
 
@@ -494,6 +531,48 @@ body {
     z-index: 1;
 }
 
+/* Carousel Controls for Banner */
+.banner .carousel-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.banner .control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #17d8f6;
+    background: rgba(23, 216, 246, 0.1);
+    color: #17d8f6;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.banner .control-btn:hover {
+    background: #17d8f6;
+    color: #1a1a2e;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(23, 216, 246, 0.5);
+}
+
+.banner .control-btn:active {
+    transform: scale(0.95);
+}
+
+.banner .control-btn i {
+    pointer-events: none;
+}
+
 @media screen and (max-width: 1023px) {
     .banner .slider {
         width: 160px;
@@ -504,6 +583,11 @@ body {
     .banner .slider .item {
         transform:
             rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+    }
+
+    .banner .slider .item:hover {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(340px) scale(1.05);
     }
 
     .banner .content h1 {
@@ -523,6 +607,12 @@ body {
         text-align: center;
         padding: 0 30px;
     }
+
+    .banner .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -537,8 +627,23 @@ body {
             rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
     }
 
+    .banner .slider .item:hover {
+        transform:
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(210px) scale(1.05);
+    }
+
     .banner .content h1 {
         font-size: 5em;
+    }
+
+    .banner .control-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .banner .carousel-controls {
+        bottom: 30px;
     }
 }
 
@@ -561,7 +666,6 @@ body {
         display: flex !important;
         flex-direction: row;
         gap: 2rem;
-        /* space between links */
         position: static;
         background: transparent;
         width: auto;
@@ -591,94 +695,26 @@ body {
         position: absolute;
         top: 100%;
         right: 0;
-        background: #fff;
+        background: rgba(26, 26, 46, 0.95);
         width: 200px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(23, 216, 246, 0.2);
         z-index: 100;
     }
 
     .nav-list.active {
         display: flex;
     }
+
+    .banner .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .banner .carousel-controls {
+        bottom: 30px;
+    }
 }
 
-/* Projects Section */
-.projects {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.projects h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    color: #333;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.project-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    height: 250px;
-    text-decoration: none;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.1);
-}
-
-.project-card .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    padding: 20px;
-    color: #fff;
-    transform: translateY(100px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100%;
-    opacity: 0;
-}
-
-.project-card:hover .overlay {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-    margin: 0;
-}
+/* end of all styles */

@@ -5,25 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="io.css">
-  <link rel="stylesheet" href="projects.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <title>Elzero Website</title>
+  <title>Mahmoud Shahieen - Portfolio</title>
 </head>
 
 <body>
   <!-- nav bar start ////////////////////////////////////////////////////////////// -->
-  <header class="header">
+  <header class="header" id="home">
     <nav class="navbar">
       <div class="container">
-        <h2>
-          C<span style="color: #1c8aab;">V</span>
-        </h2>
+        <img src="images/Dragon -logo.png" alt="Logo" class="logo">
         <ul class="nav-list">
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -46,149 +42,143 @@
       <button class="btn-primary">Get Started</button>
     </div>
   </header>
-  <!-- 3d slider first //////////////////////////////////////////////////////////// -->
 
+  <!-- 3D Projects Slider //////////////////////////////////////////////////////////// -->
   <main>
-    <div class="banner-body" id="skills">
+    <div class="banner-body" id="projects">
       <div class="banner">
-        <div class="slider" style="--quantity: 10">
-          <div class="item" style="--position: 1"><img src="images/dragon_1.jpg" alt=""></div>
-          <div class="item" style="--position: 2"><img src="images/dragon_2.jpg" alt=""></div>
-          <div class="item" style="--position: 3"><img src="images/dragon_3.jpg" alt=""></div>
-          <div class="item" style="--position: 4"><img src="images/dragon_4.jpg"></div>
-          <div class="item" style="--position: 5"><img src="images/dragon_5.jpg" alt=""></div>
-          <div class="item" style="--position: 6"><img src="images/dragon_6.jpg" alt=""></div>
-          <div class="item" style="--position: 7"><img src="images/dragon_7.jpg" alt=""></div>
-          <div class="item" style="--position: 8"><img src="images/dragon_8.jpg" alt=""></div>
-          <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt=""></div>
-          <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div>
-
+        <div class="slider" style="--quantity: 6" data-paused="false">
+          <a href="https://mahmoudshahieen4-ux.github.io/Ecommerce-store/" target="_blank" class="item"
+            style="--position: 1">
+            <img src="images/ecommerce-project.png" alt="E-commerce Store">
+          </a>
+          <a href="#" target="_blank" class="item" style="--position: 2">
+            <img src="images/dragon_2.jpg" alt="Dragon Warriors Project">
+          </a>
+          <a href="#" target="_blank" class="item" style="--position: 3">
+            <img src="images/dragon_3.jpg" alt="Fantasy Portfolio">
+          </a>
+          <a href="#" target="_blank" class="item" style="--position: 4">
+            <img src="images/dragon_4.jpg" alt="Digital Art Gallery">
+          </a>
+          <a href="#" target="_blank" class="item" style="--position: 5">
+            <img src="images/dragon_5.jpg" alt="Creative Studio">
+          </a>
+          <a href="#" target="_blank" class="item" style="--position: 6">
+            <img src="images/dragon_6.jpg" alt="Tech Showcase">
+          </a>
         </div>
         <div class="content">
-          <h1 data-content="CSS ONLY">
-            CSS ONLY
+          <h1 data-content="MY PROJECTS">
+            MY PROJECTS
           </h1>
           <div class="author">
             <h2>MAHMOUD SHAHIEEN</h2>
-            <p><b>Web Design</b></p>
+            <p><b>Web Developer</b></p>
             <p>CREATIVE WEB APPLICATIONS DESIGNER</p>
           </div>
           <div class="model"></div>
         </div>
+        <div class="carousel-controls">
+          <button class="control-btn pause-btn" aria-label="Pause/Play carousel">
+            <i class="fas fa-pause"></i>
+          </button>
+        </div>
       </div>
-      <!-- 3d slider end////////////////////////////////////////////////////////////// -->
+    </div>
+    <!-- 3D Projects Slider end////////////////////////////////////////////////////////////// -->
 
 
 
-      <!-- sevives start //////////////////////////////////////////////////////////////// -->
-      <section id="services" class="services">
-        <h2>My Services</h2>
-        <div class="service-cards">
-          <div class="card">
-            <i class="fas fa-laptop-code"></i>
-            <h3>Web Development</h3>
-            <p>I can build a responsive and modern websites tailored to your needs.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>SEO Optimization</h3>
-            <p>Boost your online presence with our SEO strategies.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-bullhorn"></i>
-            <h3>Marketing</h3>
-            <p>Reach your target audience with marketing solutions of an attractive website.</p>
+    <!-- services start //////////////////////////////////////////////////////////////// -->
+    <section id="services" class="services">
+      <h2>My Services</h2>
+      <div class="service-cards">
+        <div class="card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>I can build responsive and modern websites tailored to your needs.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-chart-line"></i>
+          <h3>SEO Optimization</h3>
+          <p>Boost your online presence with our SEO strategies.</p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-react"></i>
+          <h3>skills</h3>
+          <div class="skills-cards">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+            <span>REACT</span>
+            <span>SASS/SCSS</span>
+            <span>TAILWIND</span>
+            <span>BOOTSTRAP</span>
+            <span>FIGMA</span>
+
           </div>
         </div>
-      </section>
-      <!-- services end ////////////////////////////////////////////////////// -->
+      </div>
+    </section>
+    <!-- services end ////////////////////////////////////////////////////// -->
 
-      <!-- projects start /////////////////////////////////////////////////////// -->
-      <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-          <a href="https://mahmoudshahieen4-ux.github.io/Ecommerce-store/" class="project-card" target="_blank">
-            <img src="images/ecommerce-project.png" alt="Project 1">
-            <div class="overlay">
-              <h3>Ecommerce Store</h3>
-            </div>
-          </a>
-          <a href="#" class="project-card" target="_blank">
-            <img src="images/dragon_2.jpg" alt="Project 2">
-            <div class="overlay">
-              <h3>Project Title 2</h3>
-            </div>
-          </a>
-          <a href="#" class="project-card" target="_blank">
-            <img src="images/dragon_3.jpg" alt="Project 3">
-            <div class="overlay">
-              <h3>Project Title 3</h3>
-            </div>
-          </a>
-        </div>
-      </section>
-      <!-- projects end ///////////////////////////////////////////////////////// -->
+    <!-- about start /////////////////////////////////////////////////////// -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>Hello I am Mahmoud Shahieen, a frontend web developer. It became a hobby for me <br>to build creative and
+        shining designs for websites. I wish that my designs attract your interest</p>
 
-      <!-- about start /////////////////////////////////////////////////////// -->
-      <section id="about" class="about">
-        <h2>About me</h2>
-        <p>Hello I am Mahmoud Shahieen a frontend-web developer. It became a hobby for me <br>to build creative and
-          shining designs for websites I wish that my designs attracts your interest</p>
-
-
-        <div class="info">
-          <div class="row">
-            <span>name </span>
-            <p>Mahmoud Eissa Ebraheem shahieen</p>
-          </div>
-
-          <div class="row">
-            <span>age </span>
-            <p>21</p>
-          </div>
-
-          <div class="row">
-            <span>education</span>
-            <p>AI Artificial intelligence at menoufia</p>
-          </div>
-
-          <div class="row">
-            <span>location </span>
-            <p>mit-ghamr /Eldaqahliya / Egypt</p>
-          </div>
-
-          <div class="row">
-            <span>phone </span>
-            <p>01007852868</p>
-          </div>
-
-          <div class="row">
-            <span>Email </span>
-            <p>mahmoudshahieen40@gmail.com</p>
-          </div>
-
-
+      <div class="info">
+        <div class="row">
+          <span>Name </span>
+          <p>Mahmoud Eissa Ebraheem Shahieen</p>
         </div>
 
-      </section>
+        <div class="row">
+          <span>Age </span>
+          <p>21</p>
+        </div>
 
-      <!-- about end  /////////////////////////////////////////////////////////////// -->
+        <div class="row">
+          <span>Education</span>
+          <p>AI Artificial Intelligence at Menoufia</p>
+        </div>
 
-      <!-- contact start ////////////////////////////////////////////////////////////// -->
-      <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn-primary">Send Message</button>
+        <div class="row">
+          <span>Location </span>
+          <p>Mit-Ghamr / Eldaqahliya / Egypt</p>
+        </div>
 
-        </form>
-      </section>
+        <div class="row">
+          <span>Phone </span>
+          <p>01007852868</p>
+        </div>
+
+        <div class="row">
+          <span>Email </span>
+          <p>mahmoudshahieen40@gmail.com</p>
+        </div>
+      </div>
+    </section>
+    <!-- about end  /////////////////////////////////////////////////////////////// -->
+
+    <!-- contact start ////////////////////////////////////////////////////////////// -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </section>
   </main>
+
   <footer class="footer">
-    <p>&copy; mahmoud shahieen. All rights reserved.</p>
+    <p>&copy; Mahmoud Shahieen. All rights reserved.</p>
   </footer>
+
   <script src="io.js"></script>
 </body>
 

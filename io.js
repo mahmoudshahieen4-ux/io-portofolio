@@ -28,13 +28,12 @@ window.addEventListener('scroll', () => {
   lastScrollY = window.scrollY;
 });
 
-// Banner Slider Controls - Using animation-play-state to maintain position
+// Banner Slider Controls - Pause button only
 const bannerSlider = document.querySelector('.banner .slider');
 const pauseBtn = document.querySelector('.banner .pause-btn');
 
 if (bannerSlider) {
   let isPausedByButton = false;
-  let isPausedByHover = false;
 
   // Function to pause animation at current position
   function pauseAnimation() {
@@ -59,35 +58,11 @@ if (bannerSlider) {
         icon.classList.remove('fa-pause');
         icon.classList.add('fa-play');
       } else {
-        // Resume only if not paused by hover
-        if (!isPausedByHover) {
-          resumeAnimation();
-        }
+        // Resume
+        resumeAnimation();
         icon.classList.remove('fa-play');
         icon.classList.add('fa-pause');
       }
     });
   }
-
-  // Hover handler for individual items
-  const items = bannerSlider.querySelectorAll('.item');
-
-  items.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      if (!isPausedByHover && !isPausedByButton) {
-        isPausedByHover = true;
-        pauseAnimation();
-      }
-    });
-
-    item.addEventListener('mouseleave', () => {
-      if (isPausedByHover) {
-        isPausedByHover = false;
-        // Resume only if not paused by button
-        if (!isPausedByButton) {
-          resumeAnimation();
-        }
-      }
-    });
-  });
 }

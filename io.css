@@ -56,33 +56,28 @@ body {
 
 .nav-list {
   display: flex;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-15px);
-  transition:
-    max-height 0.35s ease,
-    opacity 0.35s ease,
-    transform 0.35s ease;
-  z-index: 999;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  position: static;
+  top: auto;
+  right: auto;
+  width: auto;
+  text-align: left;
+  overflow: visible;
+  max-height: none;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  z-index: auto;
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: auto;
 }
 
 .nav-list.active {
-  max-height: 420px;
-  opacity: 1;
-  transform: translateY(0);
-  padding: 10px 0;
-  pointer-events: auto;
+  /* active state only used for mobile toggle */
 }
 
 .nav-list li {
@@ -132,12 +127,37 @@ body {
   }
 
   .nav-list {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
     top: 100%;
-    padding: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition:
+      max-height 0.35s ease,
+      opacity 0.35s ease,
+      transform 0.35s ease;
+    z-index: 999;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
   }
 
   .nav-list.active {
+    max-height: 420px;
+    opacity: 1;
+    transform: translateY(0);
     padding: 10px 0;
+    pointer-events: auto;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
   }
 
   .info {

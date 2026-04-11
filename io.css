@@ -210,6 +210,37 @@ body {
   font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
+.header-content p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 20px;
+}
+.btn-primary {
+  background: #17d8f6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: auto;
+}
+
+.btn-primary:hover {
+  background: #0cbaef;
+}
+
+/* Reveal animation for sections */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .header-content p {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -758,12 +789,14 @@ body {
     bottom: 30px;
   }
 }
-@media screen and(max-width:500px) {
-  nav .navbar {
+@media screen and (max-width: 500px) {
+  .navbar {
     padding-inline: 0.2rem;
   }
+
   .container {
     padding-inline: 0.2rem;
   }
 }
+
 /* end of all styles */
